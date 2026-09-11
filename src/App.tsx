@@ -177,7 +177,7 @@ export default function App() {
     });
 
     if (hasBorder && ext !== 'svg') {
-      const blob = await hdQr.getRawData(ext);
+      const blob = await hdQr.getRawData(ext) as Blob;
       if (!blob) return;
       const objectUrl = URL.createObjectURL(blob);
       const img = new Image();
@@ -233,7 +233,7 @@ export default function App() {
       };
       img.src = objectUrl;
     } else if (hasBorder && ext === 'svg') {
-      const blob = await hdQr.getRawData('svg');
+      const blob = await hdQr.getRawData('svg') as Blob;
       if (!blob) return;
       const text = await blob.text();
       const parser = new DOMParser();
@@ -313,7 +313,7 @@ export default function App() {
     });
 
     try {
-      const blob = await printQr.getRawData('png');
+      const blob = await printQr.getRawData('png') as Blob;
       if (!blob) return;
       const objectUrl = URL.createObjectURL(blob);
       
@@ -419,7 +419,7 @@ export default function App() {
          reader.onloadend = () => {
            openPrintWindow(reader.result as string);
          }
-         reader.readAsDataURL(blob);
+         reader.readAsDataURL(blob as Blob);
       }
 
     } catch (e) {
