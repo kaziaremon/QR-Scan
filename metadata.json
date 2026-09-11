@@ -1,0 +1,8 @@
+{
+  "name": "প্রিমিয়াম কিউআর জেনারেটর",
+  "description": "একটি উন্নত ও কাস্টমাইজেবল কিউআর কোড জেনারেটর অ্যাপ।",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
