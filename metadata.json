@@ -1,6 +1,6 @@
 {
-  "name": "প্রিমিয়াম কিউআর জেনারেটর",
-  "description": "একটি উন্নত ও কাস্টমাইজেবল কিউআর কোড জেনারেটর অ্যাপ।",
+  "name": "QR Studio Pro",
+  "description": "World-Class custom QR code architect and generator with real-time optical verification.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

@@ -68,7 +68,7 @@ const densityOptions: { label: string; labelBn: string; desc: string; descBn: st
 ];
 
 export default function App() {
-  const [lang, setLang] = useState<'en' | 'bn'>('bn');
+  const [lang, setLang] = useState<'en' | 'bn'>('en');
   const [contentType, setContentType] = useState<QRContentType>('url');
   
   // Content States
@@ -551,14 +551,29 @@ export default function App() {
               <span>{lang === 'bn' ? 'অপ্টিমাইজ রিসেট' : 'Optimize Reset'}</span>
             </button>
 
-            {/* Language Switcher */}
-            <button
-              onClick={() => setLang(lang === 'bn' ? 'en' : 'bn')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 border border-blue-500/30 transition-all"
-            >
-              <Languages size={14} />
-              <span>{lang === 'bn' ? 'English' : 'বাংলা'}</span>
-            </button>
+            {/* Dual Language Switcher */}
+            <div className="flex items-center p-1 rounded-xl bg-slate-900/90 border border-slate-700/80 shadow-inner">
+              <button
+                onClick={() => setLang('en')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  lang === 'en'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => setLang('bn')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  lang === 'bn'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                বাংলা
+              </button>
+            </div>
           </div>
 
         </div>

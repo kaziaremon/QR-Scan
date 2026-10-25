@@ -34,7 +34,7 @@ export const ScannerVerifier: React.FC<ScannerVerifierProps> = ({
     timestamp: Date.now(),
   });
 
-  const contrastInfo = evaluateColors(dotsColor, backgroundColor);
+  const contrastInfo = evaluateColors(dotsColor, backgroundColor, lang);
 
   // Scan the rendered QR Code whenever the canvas updates
   useEffect(() => {
